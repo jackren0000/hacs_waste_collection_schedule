@@ -6,6 +6,9 @@ from flask import Flask, request, jsonify
 import os, sys, types, importlib.util, json
 from council_lookup import get_council
 
+# Ensure the custom_components directory is in the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "custom_components", "waste_collection_schedule"))
+
 # Stub Collection for import
 stub = types.ModuleType("waste_collection_schedule")
 from waste_collection_schedule import Collection as RealCollection  # type: ignore
