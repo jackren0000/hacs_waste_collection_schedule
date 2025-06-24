@@ -70,8 +70,8 @@ def get_collections():
     except Exception as e:
         return jsonify({'error':str(e)}), 500
     # build response
-    out = [{'date':str(c.date), 'type':c.t, 'icon':c.icon} for c in cols]
+    out = [{'date':str(c.date), 'type':c.type, 'icon':c.icon} for c in cols]
     return jsonify({'council':council, 'address':address, 'collections': out})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8080)
