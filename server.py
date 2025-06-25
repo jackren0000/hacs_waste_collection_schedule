@@ -69,9 +69,18 @@ def get_collections():
         cols = instance.fetch()
     except Exception as e:
         return jsonify({'error':str(e)}), 500
-    # build response
-    out = [{'date':str(c.date), 'type':c.type, 'icon':c.icon} for c in cols]
-    return jsonify({'council':council, 'address':address, 'collections': out})
+
+    # build response: only the closest date for each collection type
+    # sort collections by date and pick first occurrence of each type
+    cols_sorted = sorted(cols, key=lambda c: c.date)
+    seen = set()
+    out = []
+    for c in cols_sorted:
+        if c.type not in seen:
+            out.append({'date': str(c.date), 'type': c.type, 'icon': c.icon})
+            seen.add(c.type)
+
+    return jsonify({'council': council, 'address': address, 'collections': out})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
