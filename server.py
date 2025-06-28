@@ -39,6 +39,14 @@ def load_source(module_name):
 
 app = Flask(__name__)
 
+def extract_street_and_suburb(full_address):
+    """Extract just the street and suburb from a full address"""
+    # Split by comma and take first two parts (street, suburb)
+    parts = [part.strip() for part in full_address.split(',')]
+    if len(parts) >= 2:
+        return f"{parts[0]}, {parts[1]}"
+    return parts[0] if parts else full_address
+
 @app.route('/collections', methods=['GET'])
 def get_collections():
     address = request.args.get('address')
@@ -57,14 +65,18 @@ def get_collections():
         module = find_module_for_council(council)
     if not module:
         return jsonify({'error':f'no source found for {council}'}), 404
+    
+    # Extract just street and suburb for the source
+    simplified_address = extract_street_and_suburb(address)
+    
     # load and fetch
     Source = load_source(module)
     # instantiate
     try:
         # try street_address param
-        instance = Source(street_address=address)
+        instance = Source(street_address=simplified_address)
     except TypeError:
-        instance = Source(address=address)
+        instance = Source(address=simplified_address)
     try:
         cols = instance.fetch()
     except Exception as e:
@@ -80,7 +92,7 @@ def get_collections():
             out.append({'date': str(c.date), 'type': c.type, 'icon': c.icon})
             seen.add(c.type)
 
-    return jsonify({'council': council, 'address': address, 'collections': out})
+    return jsonify({'council': council, 'address': simplified_address, 'collections': out})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
